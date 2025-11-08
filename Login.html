@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Expense Tracker</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./Login.css" />
+</head>
+<body>
+  <!-- Animated Gradient Background -->
+  <div id="particles-js"></div>
+
+  <section class="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-white">
+
+    <!-- Hero Section -->
+    <div class="text-center mb-10 animate-fadeIn relative overflow-hidden">
+      <!-- Floating Cards Background -->
+      <div class="absolute inset-0 flex justify-center items-center opacity-20 animate-slowFloat">
+        <div class="grid grid-cols-3 gap-6">
+          <div class="bg-white/20 backdrop-blur-lg rounded-2xl p-4 shadow-lg transform rotate-3">
+            <p class="text-3xl">💳</p>
+            <p class="text-sm mt-2">Shopping</p>
+          </div>
+          <div class="bg-white/20 backdrop-blur-lg rounded-2xl p-4 shadow-lg transform -rotate-2">
+            <p class="text-3xl">🍕</p>
+            <p class="text-sm mt-2">Food</p>
+          </div>
+          <div class="bg-white/20 backdrop-blur-lg rounded-2xl p-4 shadow-lg transform rotate-6">
+            <p class="text-3xl">🏠</p>
+            <p class="text-sm mt-2">Home</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logo + Floating Emojis -->
+      <div class="relative flex justify-center items-center mb-6">
+        <img src="assets/images/logo.png" alt="Expense Tracker Logo" class="w-20 h-20 mx-auto logo-spin" />
+        <div class="absolute text-4xl animate-floatIcon">💰</div>
+        <div class="absolute -top-6 left-10 text-3xl animate-floatIcon2">📊</div>
+        <div class="absolute top-6 right-10 text-3xl animate-floatIcon3">💳</div>
+      </div>
+
+      <!-- Animated Typing Text -->
+      <p class="text-lg mt-3 text-white/90 max-w-xl mx-auto">
+        <span id="typingText"></span>
+      </p>
+    </div>
+
+    <!-- 💎 Glassmorphic Login Form (Hidden Initially) -->
+    <div id="loginFormContainer" class="hidden relative bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-8 w-full max-w-md mx-auto border border-white/30 hover:shadow-pink-300/40 transition-all duration-500 animate-fadeUp">
+
+      <h2 class="text-2xl font-semibold mb-6 text-center text-gray-900">Login</h2>
+
+      <form id="loginForm" class="space-y-5">
+        <div class="text-left">
+          <label for="email" class="block text-sm mb-1 font-semibold text-gray-800">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" class="input-field" required />
+        </div>
+
+        <div class="text-left">
+          <label for="password" class="block text-sm mb-1 font-semibold text-gray-800">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" class="input-field" required />
+        </div>
+
+        <button type="submit" class="submit-btn">Login</button>
+      </form>
+
+      <p class="text-center text-sm mt-6 text-gray-700">
+        Don’t have an account?
+        <a href="./Register.html" class="text-yellow-300 font-semibold hover:underline">Register here</a>
+      </p>
+    </div>
+
+  </section>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed top-10 right-5 bg-white/80 backdrop-blur-xl text-gray-900 px-5 py-3 rounded-xl shadow-lg opacity-0 pointer-events-none transition-all duration-500 z-50"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="./Login.js"></script>
+</body>
+</html>
